@@ -1,0 +1,114 @@
+/* Reseta alguns estilos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #03DAC6;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #BB86FC;
+    margin: 20px 0;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    font-size: 16px;
+    margin-right: 10px;
+    border: 2px solid #03DAC6;
+    border-radius: 5px;
+    background-color: #1E1E1E;
+    color: #fff;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #03DAC6;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #018786;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #2E2E2E;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: left;
+}
+
+.delete-btn {
+    color: #FF6347;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.delete-btn:hover {
+    text-decoration: underline;
+}
+
+.success {
+    color: #00C851;
+    margin: 20px 0;
+}
+
+.error {
+    color: #ff4444;
+    margin: 20px 0;
+}
+
+/* Estilos para dispositivos móveis */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    input[type="text"] {
+        width: 80%;
+    }
+
+    button {
+        width: 80%;
+        margin-top: 10px;
+    }
+}

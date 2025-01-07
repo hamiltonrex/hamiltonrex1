@@ -1,0 +1,113 @@
+/* Estilo Geral */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212; /* Fundo escuro */
+    color: #ffffff; /* Cor do texto */
+    box-sizing: border-box;
+}
+
+/* Modal de Edição */
+.modal {
+    display: none; /* Esconde o modal até ser ativado */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo semitransparente */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #1F1F1F;
+    width: 90%; /* Aumenta a largura do modal */
+    max-width: 700px; /* Limita a largura máxima */
+    padding: 30px;
+    border-radius: 12px;
+    color: #ffffff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.modal-content h2 {
+    color: #BB86FC;
+    text-align: center;
+    font-size: 22px;
+}
+
+.modal-content label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.modal-content input {
+    width: 100%; /* Faz os campos de entrada ocuparem toda a largura disponível */
+    padding: 10px;
+    margin-top: 5px;
+    background-color: #2C2C2C;
+    border: 1px solid #444;
+    border-radius: 8px;
+    color: #ffffff;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.6);
+    font-size: 16px;
+}
+
+.modal-content input:focus {
+    border-color: #BB86FC;
+    outline: none;
+    box-shadow: 0 0 8px rgba(187, 134, 252, 0.8);
+}
+
+.modal-content button {
+    width: 100%; /* Faz o botão ocupar toda a largura */
+    padding: 12px;
+    margin-top: 15px;
+    background: linear-gradient(145deg, #03DAC6, #018786);
+    border: none;
+    border-radius: 8px;
+    color: #000000;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.modal-content button:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(145deg, #03DAC6, #00E0B3);
+}
+
+.modal-content .close {
+    color: #ffffff;
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.modal-content .close:hover {
+    color: #CF6679;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .modal-content {
+        width: 95%; /* Ajusta a largura em telas menores */
+    }
+}

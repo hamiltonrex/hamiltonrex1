@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Estilos Globais */
+
+/* Resetando margens e padding para garantir consistência entre os navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definindo o estilo para o corpo da página */
+body {
+    font-family: 'Poppins', sans-serif; /* Fonte limpa e legível */
+    background: linear-gradient(135deg, #0f0f0f 25%, #1a1a1a 100%); /* Gradiente de fundo escuro */
+    color: #ffffff; /* Cor do texto */
+    line-height: 1.6; /* Espaçamento entre as linhas de texto */
+    font-size: 16px; /* Tamanho da fonte */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    overflow-y: auto; /* Garantir que a barra de rolagem apareça */
+}
+
+/* Links - Remove a decoração padrão de sublinhado e aplica cor */
+a {
+    color: #03DAC6; /* Cor de links */
+    text-decoration: none; /* Removendo o sublinhado */
+}
+
+a:hover {
+    text-decoration: underline; /* Adicionando o sublinhado ao passar o mouse */
+}
+
+/* -------------------------------------------
+    Estilos para o Container Principal 
+------------------------------------------- */
+
+/* O container que envolve o conteúdo principal da página */
+.candidatura-container {
+    width: 80%; /* Largura da página 80% */
+    max-width: 900px; /* Largura máxima de 900px */
+    margin: 20px auto; /* Espaço ao redor e centralizado */
+    padding: 30px; /* Espaçamento interno */
+    background: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6); /* Sombra suave ao redor do container */
+    position: relative;
+    overflow: hidden;
+}
+
+.candidatura-container::before, .candidatura-container::after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: rgba(255, 255, 255, 0.05);
+    transform: rotate(45deg);
+    animation: rotate 10s linear infinite;
+    pointer-events: none;
+}
+
+.candidatura-container::after {
+    animation-direction: reverse;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Título principal */
+h1, h2 {
+    color: #BB86FC; /* Cor roxa para títulos */
+    text-align: center; /* Centralizando o texto */
+    font-size: 26px; /* Tamanho do texto */
+    text-shadow: 0 0 10px #BB86FC;
+}
+
+h2 {
+    margin-top: 20px; /* Espaçamento acima do título */
+}
+
+/* Estilo específico para "Lista De Confirmação Operação" */
+h2.lista-confirmacao {
+    font-size: 32px; /* Tamanho maior */
+    font-weight: 700; /* Negrito */
+    color: #03DAC6; /* Cor verde */
+    text-shadow: 0 0 15px #03DAC6;
+}
+
+/* -------------------------------------------
+    Estilos para mensagens de sucesso/erro
+------------------------------------------- */
+
+/* Mensagem de sucesso (verde) */
+.success {
+    color: #28a745;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Mensagem de erro (vermelho) */
+.error {
+    color: #dc3545;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* -------------------------------------------
+    Estilos para o Formulário
+------------------------------------------- */
+
+/* Estilo para os campos de entrada e seleção */
+.form-input {
+    width: 100%; /* Largura total do campo */
+    padding: 14px; /* Espaçamento interno */
+    margin: 10px 0; /* Margem entre os campos */
+    background-color: #2C2C2C; /* Cor de fundo escura */
+    border: 1px solid #444; /* Borda fina de cor escura */
+    border-radius: 8px; /* Bordas arredondadas */
+    color: #fff; /* Cor do texto */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: all 0.3s ease; /* Transição suave para o foco */
+}
+
+/* Quando o campo de entrada recebe o foco */
+.form-input:focus {
+    border-color: #BB86FC; /* Borda roxa ao focar */
+    outline: none; /* Remover contorno padrão */
+    box-shadow: 0 0 5px rgba(187, 134, 252, 0.7); /* Sombras suaves */
+}
+
+/* Estilo do botão de envio */
+button {
+    width: 100%; /* Largura total */
+    padding: 14px; /* Espaçamento interno */
+    margin-top: 20px; /* Margem superior */
+    background-color: #03DAC6; /* Cor de fundo do botão */
+    color: #000; /* Cor do texto no botão */
+    border: none; /* Remover borda padrão */
+    border-radius: 8px; /* Bordas arredondadas */
+    font-size: 18px; /* Tamanho da fonte */
+    cursor: pointer; /* Aparece o cursor de clique */
+    transition: all 0.3s ease; /* Transição suave */
+}
+
+/* Efeito hover no botão */
+button:hover {
+    background-color: #018786; /* Cor do botão ao passar o mouse */
+    transform: translateY(-2px); /* Leve elevação do botão */
+}
+
+/* -------------------------------------------
+    Estilos para a lista de colaboradores
+------------------------------------------- */
+
+/* Estilo para o texto da quantidade de colaboradores cadastrados */
+.quantidade-info {
+    text-align: center; /* Centraliza o texto */
+    font-size: 20px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito para destacar */
+    color: #FF4081; /* Cor brilhante (rosa vibrante) */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+/* Estilo da lista de colaboradores */
+.colaboradores-list {
+    list-style-type: none; /* Remover marcadores */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para cada item da lista */
+.colaboradores-list li {
+    background-color: #333; /* Cor de fundo escura */
+    padding: 12px; /* Espaçamento interno */
+    margin: 8px 0; /* Margem entre os itens */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5); /* Sombra interna */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+/* Efeito hover na lista de colaboradores */
+.colaboradores-list li:hover {
+    background-color: #444; /* Cor mais clara ao passar o mouse */
+    transform: scale(1.02); /* Leve aumento do item */
+}
+
+/* -------------------------------------------
+    Estilos para os pontos de encontro
+------------------------------------------- */
+
+/* Estilo para a lista de pontos de encontro */
+.pontos-encontro-container {
+    margin-top: 40px; /* Espaçamento superior */
+    background-color: #1F1F1F; /* Cor de fundo escura */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 12px; /* Bordas arredondadas */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7); /* Sombras ao redor */
+}
+
+/* Estilo da lista de pontos de encontro */
+.pontos-encontro-list {
+    list-style-type: none; /* Remover marcadores */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para cada item da lista de pontos de encontro */
+.pontos-encontro-list li {
+    background-color: #333; /* Cor de fundo escura */
+    padding: 12px; /* Espaçamento interno */
+    margin: 8px 0; /* Margem entre os itens */
+    border-radius: 8px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+/* Estilo para os nomes dos pontos de encontro */
+.pontos-encontro-list li span {
+    font-weight: bold; /* Destacar o nome */
+    color: #BB86FC; /* Cor roxa */
+}
+
+/* Estilo para o número de colaboradores nos pontos de encontro */
+.pontos-encontro-list li .count {
+    color: #03DAC6; /* Cor verde para o número */
+}
+
+/* -------------------------------------------
+    Responsividade para dispositivos móveis
+------------------------------------------- */
+
+/* Ajustando para telas pequenas, como dispositivos móveis */
+@media screen and (max-width: 768px) {
+    /* Ajustando o tamanho do container principal */
+    .candidatura-container {
+        width: 95%; /* Largura 95% da tela */
+        padding: 20px; /* Menos padding */
+    }
+
+    /* Aumentando a largura para 100% no celular */
+    .colaboradores-container, .pontos-encontro-container {
+        width: 100%; /* Largura total */
+        padding: 15px; /* Menos padding */
+    }
+
+    /* Ajustando o estilo das listas */
+    .colaboradores-list li, .pontos-encontro-list li {
+        font-size: 14px; /* Fonte menor no celular */
+    }
+
+    /* Ajustando os inputs e o botão para ocupar toda a largura da tela */
+    .form-input, button {
+        width: 100%; /* Largura total */
+        font-size: 16px; /* Tamanho de fonte adequado para celular */
+    }
+}
+
+/* Estilo para campos com erro */
+.campo-erro {
+    border: 2px solid red;
+}

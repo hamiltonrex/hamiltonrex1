@@ -1,0 +1,186 @@
+/* Estilo Geral */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    line-height: 1.6;
+    padding: 0;
+}
+
+/* Container Principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Cabeçalho */
+header {
+    width: 100%;
+    padding: 20px;
+    background-color: #1F1F1F;
+    text-align: center;
+    color: #ffffff;
+}
+
+header h1 {
+    font-size: 32px;
+    margin: 0;
+    color: #BB86FC;
+}
+
+/* Menu de Navegação */
+nav {
+    width: 100%;
+    background-color: #1F1F1F;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav a {
+    color: #ffffff;
+    font-size: 18px;
+    margin: 0 20px;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #2C2C2C;
+    color: #BB86FC;
+}
+
+/* Estilo do Conteúdo da Política */
+.policy-container {
+    width: 90%;
+    max-width: 1200px;
+    background-color: #1F1F1F;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    margin: 50px auto;
+}
+
+.policy-container h2 {
+    font-size: 28px;
+    color: #BB86FC;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.policy-container p {
+    font-size: 16px;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+.policy-container ul {
+    margin-left: 30px;
+    font-size: 16px;
+    color: #e0e0e0;
+}
+
+.policy-container li {
+    margin-bottom: 10px;
+}
+
+/* Rodapé */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #1F1F1F;
+    text-align: center;
+    padding: 10px 0;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+footer a {
+    color: #BB86FC;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .policy-container {
+        width: 90%;
+        margin: 30px auto;
+    }
+
+    nav a {
+        font-size: 16px;
+        margin: 0 10px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
+
+/* Estilo do Login */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: rgba(28, 28, 28, 0.8); /* Transparência no fundo */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.login-container h1 {
+    font-size: 30px;
+    color: #BB86FC;
+    margin-bottom: 20px;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
+    font-size: 16px;
+}
+
+.login-container input:focus {
+    outline: none;
+    border-color: #BB86FC;
+    box-shadow: 0 0 5px rgba(187, 134, 252, 0.8);
+}
+
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #03DAC6;
+    border: none;
+    border-radius: 8px;
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-container button:hover {
+    background-color: #018786;
+}
+
+.login-container .error {
+    color: #CF6679;
+    text-align: center;
+    margin-bottom: 15px;
+}
